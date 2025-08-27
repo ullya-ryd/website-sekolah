@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMK Negeri 1 Ullya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Tombol Dark Mode -->
+  <button id="darkModeToggle" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    🌓 Dark Mode</button>
+  <!-- Tombol Scroll to Top -->
+  <button id="scrollToTopBtn" title="Ke atas">↑</button>
+  <header>
+    <div class="container">
+      <h1>SMK Negeri 1 Ullya</h1>
+      <nav>
+        <ul>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#jurusan">Jurusan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Selamat Datang di Website Resmi</h2>
+      <p>SMK Negeri 1 Ullya – Sekolah Vokasi Berkualitas</p>
+      <a href="#profil" class="btn">Lihat Profil Sekolah</a>
+    </div>
+  </section>
+
+  <section id="profil" class="content">
+    <div class="container">
+      <h3>Profil Sekolah</h3>
+      <p>SMK Negeri 1 Ullya adalah sekolah menengah kejuruan unggulan yang berfokus pada pengembangan keterampilan teknis dan kejuruan yang relevan dengan kebutuhan dunia industri saat ini. Dengan didukung oleh tenaga pendidik yang profesional serta fasilitas modern, sekolah ini siap membekali siswa dengan pengetahuan dan kompetensi praktis yang siap pakai. SMK N 1 Ullya berkomitmen mencetak lulusan yang tidak hanya kompeten secara teknis, tetapi juga memiliki sikap profesional dan jiwa kewirausahaan yang tinggi.</p>
+      <p>Selain pembelajaran di kelas dan praktik, SMK Negeri 1 Ullya aktif mengadakan berbagai program pengembangan karakter dan kewirausahaan yang bertujuan mempersiapkan siswa menjadi tenaga kerja terampil dan mandiri. Sekolah ini juga menjalin kerja sama erat dengan dunia industri untuk memastikan kualitas pendidikan yang sesuai dengan kebutuhan pasar kerja, sehingga lulusan siap menghadapi tantangan global dengan percaya diri dan inovasi.</p>
+    </div>
+  </section>
+
+  <section id="jurusan" class="content gray">
+    <div class="container">
+      <h3>Jurusan Unggulan</h3>
+      <ul>
+        <li>Teknik Komputer dan Jaringan</li>
+        <li>Rekayasa Perangkat Lunak</li>
+        <li>Desain Komunikasi Visual</li>
+        <li>Management Perkantoran</li>
+        <li>Akuntansi dan Keuangan Lembaga</li>
+        <li>Layanan Perbankan Syariah</li>
+        <li>Bisnis Retail</li>
+        <li>Bisnis Digital</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak" class="content">
+    <div class="container">
+      <h3>Kontak Kami</h3>
+      <p>Email: info@rosyada.ullya2.sch.id</p>
+      <p>Telepon: 083151486336</p>
+      <p>Alamat: Jl. Parangtritis No.KM.11, Dukuh, Sabdodadi, Kec. Bantul, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55715</p>
+      <!-- Google Maps Embed -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7904.082410570134!2d110.35306510384207!3d-7.8907581594795895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7b00889ad8f84d%3A0x2e0009ca7815eaf0!2sSMK%20Negeri%201%20Bantul!5e0!3m2!1sid!2sid!4v1755581323457!5m2!1sid!2sid"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SMK Negeri 1 Ullya. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>// DARK MODE TOGGLE
+    // script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  // Dark Mode Toggle
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+      darkModeToggle.textContent = '🌞 Light Mode';
+    } else {
+      darkModeToggle.textContent = '🌓 Dark Mode';
+    }
+  });
+
+  // Scroll To Top Button
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+  
+
+</body>
+</html>
